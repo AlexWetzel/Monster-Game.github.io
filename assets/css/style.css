@@ -1,0 +1,38 @@
+body {
+	background-color: green;
+}
+
+header {
+	background-color: grey;
+	padding: 30px 0px;
+	height: auto;
+	width: 100%;
+}
+
+
+.character {
+	background-color: white;
+	margin: 10px;
+	border-style: solid;
+	border-color: green;
+	border-width: 1px;
+	width: auto;
+	height: 80px;
+	float: left;
+}
+
+#players,
+#enemies,
+#defenders {
+	background-color: grey;
+	margin: 10px 0px;
+	padding: 30px;
+	height: 150px;
+	width: auto;
+}
+
+#attack {
+	float: left;
+	clear: both;
+
+}
