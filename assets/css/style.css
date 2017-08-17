@@ -1,5 +1,5 @@
 body {
-	background-color: green;
+	background-image: url(http://vignette3.wikia.nocookie.net/monsterhunter/images/5/54/QuestBG11.png/revision/latest?cb=20101001063815);
 }
 
 header {
@@ -9,6 +9,15 @@ header {
 	width: 100%;
 }
 
+h2 {
+	clear: both;
+}
+
+.wrap {
+	width: 960px;
+	margin: 0 auto;
+	position: relative;
+}
 
 .character {
 	background-color: white;
@@ -21,15 +30,41 @@ header {
 	float: left;
 }
 
+.render {
+	position: absolute;
+	left: -50px;
+	top: 0px;
+	height: 450px;
+	width: auto;
+}
+
+#space {
+	/*background-color: blue;*/
+	height: 500px;
+	width: auto;
+	clear: both;
+}
+
 #players,
 #enemies,
 #defenders {
 	background-color: grey;
 	margin: 10px 0px;
-	padding: 30px;
-	height: 150px;
-	width: auto;
+	padding: 10px 30px;
+	height: 250px;	
+	overflow : auto;
 }
+
+#players {
+	float: left;
+}
+
+#defenders {
+	float: left;
+}
+
+#enemies {
+	float: left;
 
 #attack {
 	float: left;

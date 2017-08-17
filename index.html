@@ -5,32 +5,49 @@
 	<title>Document</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+<!-- 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/javascript/game.js"></script> -->
 </head>
 <body>
 	<header id="title"><h1>GAME</h1></header>
-	<div id="players">
-		<div id="rathalos" class="character">
-			<h3>Rathalos</h3>
-			<img src="assets/images/MH4-Rathalos_icon.png" alt="">
-		</div>
-		<div id="tigrex" class="character">
-			<h3>Tigrex</h3>
-			<img src="assets/images/MH4-Tigrex_icon.png" alt="">
-		</div>
-		<div id="zinogre" class="character">
-			<h3>Zinogre</h3>
-			<img src="assets/images/MH4-Zinogre_icon.png" alt="">
-		</div>
-		<div id="gore-magala" class="character">
-			<h3>Gore Magala</h3>
-			<img src="assets/images/MH4-Gore_Magala_icon.png" alt="">
-		</div>
-		
+	<div class="wrap">
 
-	</div>
-	<div id="enemies"></div>
-	<div id="defenders">
-		<button id="attack">Attack</button>
+		<div id="space">
+			
+		</div>
+		<div id="message">Choose your monster.</div>
+
+		<div id="players">
+			<h2>Monster</h2>
+			<div id="rathalos" class="character">
+				<h3>Rathalos</h3>
+				<img src="assets/images/MH4-Rathalos_icon.png" alt="">
+				<img class="render" id="rath-rend" src="assets/images/MH4-Rathalos_Render_001.png" alt="">
+			</div>
+			<div id="tigrex" class="character">
+				<h3>Tigrex</h3>
+				<img src="assets/images/MH4-Tigrex_icon.png" alt="">
+				<img class="render" id="tig-rend" src="assets/images/MH4-Tigrex_Render_001.png" alt="">
+			</div>
+			<div id="zinogre" class="character">
+				<h3>Zinogre</h3>
+				<img src="assets/images/MH4-Zinogre_icon.png" alt="">
+				<img class="render" id="zino-rend" src="assets/images/MH4-Zinogre_Render_001.png" alt="">
+			</div>
+			<div id="gore-magala" class="character">
+				<h3>Gore Magala</h3>
+				<img src="assets/images/MH4-Gore_Magala_icon.png" alt="">
+				<img class="render" id="gore-rend" src="assets/images/MH4-Gore_Magala_Render_001.png" alt="">
+			</div>
+		</div>		
+		<div id="defenders">
+			<h2>Target</h2>
+			<button id="attack">Attack</button>
+		</div>
+		<div id="enemies">
+			<h2>Enemies</h2>
+		</div>
 	</div>
 
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
