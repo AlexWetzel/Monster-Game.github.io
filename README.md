@@ -2,9 +2,6 @@
 
 Link: https://alexwetzel.github.io/week-4-game.github.io/
 
-Currently github fails to load some icons and I don't know why.
-
-
 A game utilizing jQuery where you choose a character and fight opponents, based off the Monster Hunter series of games by Capcom.
 
 As of writing this the game itself works, but the styling on the website is only half complete.
