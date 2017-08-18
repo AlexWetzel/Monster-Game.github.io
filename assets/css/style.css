@@ -30,12 +30,6 @@ h2 {
 	float: left;
 }
 
-.icon {
-	width: 139px;
-	height: auto;
-}
-
-
 .render,
 .flip-render {
 	position: absolute;
