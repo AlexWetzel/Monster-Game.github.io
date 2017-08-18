@@ -19,7 +19,7 @@ var game = {
 	},
 
 	updateStats: function(stats, monster) {
-		$(stats).text("Attack: " + monster.attr("atk") + " Counter: " + monster.attr("cAtk") + " Health: " + monster.attr("hp"));
+		$(stats).html("Attack: " + monster.attr("atk") + "<br> Counter: " + monster.attr("cAtk") + "<br> Health: " + monster.attr("hp"));
 	},
 
 	showRender: function(selection, side){
@@ -50,7 +50,6 @@ var game = {
 
 	flipRender: function(selection){
 		$(left).not($(selection).find(left)).addClass("flip-render").removeClass("render");
-		// $(document).find(left).not($(selection).find(left)).addClass("flip-render").removeClass("render");
 	}
 }
 
@@ -110,8 +109,6 @@ $(document).on("click", "#enemies>div", function() {
 });
 
 
-
-
 //When the attack button is hit
 $(document).on("click", "#attack", function() {
 	//If a defender is selected, the player is allowed to attack
@@ -157,7 +154,6 @@ $(document).on("click", "#attack", function() {
 				$("#message").append("<br> You have been defeated! <br> (refresh the page to start over)");
 			}
 		}
-		// $("#players>div>p").text("Attack: " + monster.attr("atk") + " Counter: " + monster.attr("cAtk") + " Health: " + monster.attr("hp"));
 	}
 
 });

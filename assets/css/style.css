@@ -30,6 +30,12 @@ h2 {
 	float: left;
 }
 
+.icon {
+	width: 139px;
+	height: auto;
+}
+
+
 .render,
 .flip-render {
 	position: absolute;
@@ -51,18 +57,26 @@ h2 {
 
 #space {
 	/*background-color: blue;*/
-	height: 500px;
+	height: 450px;
 	width: auto;
 	clear: both;
+}
+
+#message {
+	margin: 10px 30px;
+	padding: 10px;
+	width: 500px;
+	height: 80px;
+	color: yellow;
+	background-color: #000526;
 }
 
 #players,
 #enemies,
 #defenders {
 	background-color: grey;
-	margin: 10px 0px;
 	padding: 10px 30px;
-	height: 250px;	
+	height: 240px;	
 	overflow : auto;
 }
 
