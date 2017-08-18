@@ -4,12 +4,23 @@ body {
 
 header {
 	background-color: grey;
-	padding: 30px 0px;
+	padding: 10px 0px;
 	height: auto;
 	width: 100%;
 }
 
+h1 {
+	text-align: center;
+	font-size: 24px;
+}
+
 h2 {
+	clear: both;
+}
+
+.clear {
+	overflow: auto;
+	width: 100%;
 	clear: both;
 }
 
@@ -34,7 +45,7 @@ h2 {
 .flip-render {
 	position: absolute;
 	top: 0px;
-	height: 450px;
+	height: 400px;
 	width: auto;
 }
 
@@ -51,7 +62,7 @@ h2 {
 
 #space {
 	/*background-color: blue;*/
-	height: 450px;
+	height: 400px;
 	width: auto;
 	clear: both;
 }
@@ -60,9 +71,10 @@ h2 {
 	margin: 10px 30px;
 	padding: 10px;
 	width: 500px;
-	height: 80px;
+	height: 60px;
 	color: yellow;
 	background-color: #000526;
+	float: left;
 }
 
 #players,
@@ -76,17 +88,18 @@ h2 {
 
 #players {
 	float: left;
+	
 }
 
 #defenders {
-	float: left;
+	float: right;
 }
 
 #enemies {
-	float: left;
+	float: right;
+	margin: 0px 20px;
+}
 
 #attack {
 	float: left;
-	clear: both;
-
 }
