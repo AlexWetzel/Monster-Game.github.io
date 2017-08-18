@@ -9,15 +9,12 @@ var game = {
 
 	assignStats: function(stats, monster) {		
 
-		console.log(game.rathalos);
-
 		monster.attr("name", stats.name);
 		monster.attr("atk", stats.attack);
 		monster.attr("base", stats.attack);
 		monster.attr("cAtk", stats.counterAtk);
 		monster.attr("hp", stats.healthPoints);
 
-		// console.log("Attack: " + monster.attr("atk") + " Counter: " + monster.attr("cAtk") + " Health: " + monster.attr("hp"));
 		monster.append("<p>Attack: " + monster.attr("atk") + "<br> Counter: " + monster.attr("cAtk") + "<br> Health: " + monster.attr("hp") + "</p>");
 	},
 
@@ -25,34 +22,36 @@ var game = {
 		$(stats).text("Attack: " + monster.attr("atk") + " Counter: " + monster.attr("cAtk") + " Health: " + monster.attr("hp"));
 	},
 
-	// hoover: function(select) {
-	// 	select.not(".render").hover(function(){
-	// 		$(this).find(".render").fadeIn("fast");
-	// 	},
-	// 	function(){
-	// 		$(this).find(".render").fadeOut("fast");
-	// 	});
+	showRender: function(selection, side){
 
-	showRender: function(selection){
 		if(game.playerSelect === false){
-			$(selection).mouseenter(function(){
-				$(selection).find(".render").stop(true).fadeIn("fast");		
-			}).mouseleave(function(){
-					if (game.playerSelect !== true) {
-						$(selection).find(".render").hide();
-					}
-			});
-		}
-	}
-
-	// hideRender: function(selection){
-
-	// 	$(selection).mouseleave(function(){
-	// 		console.log(game.playerSelect);
-	// 		$(selection).find(".render").hide();
-	// 	});
-	// }
+			$(selection).find(side).stop(true).fadeIn("fast")
 	
+			$(selection).mouseleave(function(){
+				if (game.playerSelect === false) {
+					$(selection).find(side).hide();
+				}
+			});
+		};
+	},
+
+	showFlipRender: function(selection, side){
+
+		if(game.defenderSelect === false){
+			$(selection).find(side).stop(true).fadeIn("fast")
+	
+			$(selection).mouseleave(function(){
+				if (game.defenderSelect === false) {
+					$(selection).find(side).hide();
+				}
+			});
+		};
+	},
+
+	flipRender: function(selection){
+		$(left).not($(selection).find(left)).addClass("flip-render").removeClass("render");
+		// $(document).find(left).not($(selection).find(left)).addClass("flip-render").removeClass("render");
+	}
 }
 
 var rath = $("#rathalos");
@@ -60,6 +59,8 @@ var tig = $("#tigrex");
 var zino = $("#zinogre");
 var gore = $("#gore-magala");
 var i = 3;
+var left = ".render";
+var right = ".flip-render";
 
 game.assignStats(game.rathalos, rath);
 game.assignStats(game.tigrex, tig);
@@ -67,15 +68,12 @@ game.assignStats(game.zinogre, zino);
 game.assignStats(game.gore_magala, gore);
 
 
+$(left).hide();
 
-$(".render").hide();
+$(document).on("mouseover", "#players>div", function(){
 
-
-
-game.showRender(rath);
-game.showRender(tig);
-game.showRender(zino);
-game.showRender(gore);
+	game.showRender(this, left, game.playerSelect);
+});
 
 $(document).on("click", "#players>div", function() {
 
@@ -87,14 +85,16 @@ $(document).on("click", "#players>div", function() {
 
 		game.playerSelect = true;
 		$("#message").text("Choose your target");
-		$(this).find(".render").stop(true);
-		console.log("test");
+		
+		game.flipRender(this);
 	};
 });
 
+$(right).hide();
 
-
-
+$(document).on("mouseover", "#enemies>div", function(){
+	game.showFlipRender(this, right);
+});
 	
 $(document).on("click", "#enemies>div", function() {	
 
@@ -106,7 +106,6 @@ $(document).on("click", "#enemies>div", function() {
 
 		game.defenderSelect = true;
 		$("#message").text("Hit the FIGHT button to battle!")
-		$(this).stop();
 	}
 });
 
