@@ -1,4 +1,4 @@
-# week-4-game.github.io
+# Monster-Game.github.io
 
 Link: https://alexwetzel.github.io/week-4-game.github.io/
 
