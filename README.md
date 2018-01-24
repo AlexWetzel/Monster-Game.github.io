@@ -1,6 +1,6 @@
 # Monster-Game.github.io
 
-Link: https://alexwetzel.github.io/week-4-game.github.io/
+Link: https://alexwetzel.github.io/Monster-Game.github.io/
 
 A game utilizing jQuery where you choose a character and fight opponents, based off the Monster Hunter series of games by Capcom.
 
